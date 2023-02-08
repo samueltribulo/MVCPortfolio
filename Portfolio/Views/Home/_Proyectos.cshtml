@@ -1,0 +1,37 @@
+﻿<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+        @foreach (var proyecto in Model)
+        {
+
+            <div class="col">
+                <div class="card shadow" >
+                    <div class="img-proyectos">
+                        <img src="@proyecto.ImageURL" class="" alt="imagen proyecto" />
+                    </div>                    
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            @proyecto.Titulo
+                        </h5>
+                        <p class="card-text">
+                            @proyecto.Descripcion
+                        </p>
+                        <h5 class="card-title">
+                            Tecnologías
+                        </h5>
+                        <p class="card-text">
+                            @proyecto.Tecnologias
+                        </p>
+
+
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn" href="@proyecto.Link" rel="noreferrer noreferrer" target="_blank" style="background: #20AC6B; color: white;">
+                            Ir al proyecto
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

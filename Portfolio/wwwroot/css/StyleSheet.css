@@ -1,0 +1,169 @@
+﻿*{
+    box-sizing: border-box;
+}
+
+#fotoSamuel{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 2rem 0;
+}
+
+.seccion-bienvenida-container {
+    background-color: #20AC6B;
+}
+
+.seccion-bienvenida{
+    margin: 4rem 0 10rem 0;
+    color: white;
+}
+
+.seccion-bienvenida h1{
+    margin-bottom: 1rem;
+}
+
+.seccion-bienvenida p{
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+.maquina-escribir-container {
+    display: felx;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    font-size: 2.5rem;
+    color: #20AC6B;
+    font-weight: bold;
+}
+
+.maquina-escribir{
+    position: relative;
+}
+
+.maquina-escribir::after{
+    content: "";
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    animation: maquinadeescribir 2.5s infinite alternate steps(16);
+}
+
+.cabecera{
+    font-weight: bold;
+    color: #20AC6B;
+}
+
+.habilidades{
+    padding: 20px;
+}
+
+.habilidades ul{
+    list-style: none;
+    padding: 0;
+}
+
+.habilidades i{
+    font-size: 40px;
+    color: #20AC6B;
+}
+
+#FormContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#FormContacto{
+    width: 50%;
+}
+
+.carousel-inner{
+    padding: 1em;
+}
+
+.carousel-control-prev{
+    width: 4vh;
+    height: 4vh;
+    background-color: #20AC6B;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-control-next {
+    width: 4vh;
+    height: 4vh;
+    background-color: #20AC6B;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-proyectos {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-proyectos img {
+        max-width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+}
+
+
+
+.img-wrapper{
+    max-width: 100%;
+    height: 17em;
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1023px) {
+    #FormContacto {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px){
+    #FormContacto{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .carousel-inner{
+        display:flex;
+    }
+    .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+    .img-wrapper{
+        height: 23vw;
+    }
+}
+
+@keyframes maquinadeescribir {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}

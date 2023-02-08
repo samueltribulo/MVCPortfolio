@@ -1,0 +1,80 @@
+﻿@model IEnumerable<CertificadoDTO>
+
+@if (Model is not null)
+{
+
+    <div class="text-center mb-5" style="padding-top: 5rem;">
+
+        <h1>
+            Mis certificados
+        </h1>
+        <p>
+            Aquí pueden ver algunos de mis certificados.
+        </p>
+    </div>
+    <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          @{
+              var proyectos = Model.ToList();
+
+                for (int i = 0; i < proyectos.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        <div id="firstCert" class="carousel-item">
+                            <div class="card" style="margin: 0 .5em">
+                            <div class="img-wrapper">
+                                <img src="@proyectos[i].ImageURL" class="" alt="imagen proyecto" />
+                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        @proyectos[i].Titulo
+                                    </h5>
+                                    <p class="card-text">
+                                        @proyectos[i].Descripcion
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn" href="@proyectos[i].Link" rel="noreferrer noreferrer" target="_blank" style="background: #20AC6B; color: white;">
+                                        Ir al proyecto
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="carousel-item cert">
+                            <div class="card" style="margin: 0 .5em">
+                                <div class="img-wrapper">
+                                    <img src="@proyectos[i].ImageURL" class="" alt="imagen proyecto" />
+                                </div>                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        @proyectos[i].Titulo
+                                    </h5>
+                                    <p class="card-text">
+                                        @proyectos[i].Descripcion
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn" href="@proyectos[i].Link" rel="noreferrer noreferrer" target="_blank" style="background: #20AC6B; color: white;">
+                                        Ver certificado
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                        
+                    }
+                }
+          }
+        </div>
+      <button class="carousel-control-prev"  type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+}

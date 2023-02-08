@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<div id="FormContainer">
+    <div id="FormContacto">
+        <h1 class="text-center">
+            Formulario de Contacto
+        </h1>
+
+        <form class="row flex-column" asp-controller="Home" asp-action="Contacto">
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">
+                    Nombre
+                </label>
+                <input required type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" />
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">
+                    Email
+                </label>
+                <input required type="email" class="form-control" id="email" name="email" placeholder="Tu email" />
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">
+                    Mensaje
+                </label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-25 align-self-center fs-5">
+                Enviar
+            </button>
+        </form>
+        <div class="mt-5" style="font-size: 1.5em;">
+            <div class="alert alert-info" role="alert">
+                <i class="bi bi-github" ></i>
+                <a style="text-decoration:none;" href="https://github.com/samueltribulo" rel="noreferrer noreferrer" target="_blank">
+                    Mi Github
+                </a>
+            </div>    
+            <div class="alert alert-info" role="alert">
+                <i class="bi bi-linkedin" ></i>
+                <a style="text-decoration:none;" href="https://www.linkedin.com/in/samueltribulo/" rel="noreferrer noreferrer" target="_blank">
+                    Mi LinkedIn
+                </a>
+            </div>
+            <div class="alert alert-info" role="alert">
+                <i class="bi bi-telephone" ></i>
+                <a style="text-decoration:none;" href="#">
+                    Teléfono: +54 11 23976927
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
